@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objection Detox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Objection Detox</h1>
+        <p class="tagline">Practice handling objections with confidence, calm, and empathy.</p>
+      </header>
+
+      <section class="controls card">
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect"></select>
+        <button id="newObjectionBtn" type="button">Give me a new objection</button>
+      </section>
+
+      <section class="objection card">
+        <h2>Customer objection</h2>
+        <p id="objectionText">Press "Give me a new objection" to start.</p>
+      </section>
+
+      <section class="practice card">
+        <h2>Your response</h2>
+        <textarea
+          id="userResponse"
+          rows="6"
+          placeholder="Type how you would respond. Keep it natural and human."
+        ></textarea>
+        <div class="actions">
+          <button id="checkPushyBtn" type="button">Too Pushy? Check</button>
+          <button id="showSuggestionBtn" type="button">Show better response</button>
+        </div>
+        <div id="pushyFeedback" class="feedback" aria-live="polite"></div>
+      </section>
+
+      <section class="suggestion card hidden" id="suggestionPanel">
+        <h2>Suggested response</h2>
+        <p id="suggestedResponse"></p>
+
+        <h3>Coaching notes (why this works)</h3>
+        <ul id="coachingNotes"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
